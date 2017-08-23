@@ -1,0 +1,135 @@
+@import 'reset';
+
+$font-title: 400 56px Miso, sans-serif; 
+$font-subtitle: 300 20px Lato, sans-serif; 
+$font-text: 700 70px Miso, sans-serif;
+$price-color: #02995b;
+$text-color: #333333;
+$bg-color: #fdde7e;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+@font-face {
+	font-family: "Miso";
+	src:
+ 	url("../../fonts/miso.eot?") format("eot"),
+ 	url("../../fonts/miso.woff") format("woff"),
+ 	url("../../fonts/miso.ttf") format("truetype"),
+ 	url("../../fonts/miso.svg#Miso") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+@mixin box-sizing($box) {
+  -webkit-box-sizing: $box; 
+     -moz-box-sizing: $box; 
+          box-sizing: $box;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify; 
+ 	justify-content: $justify;
+}
+@mixin align-items($items) {
+	-webkit-align-items: $items; 
+    	align-items: $items; 
+}
+@mixin align-self($self) {
+	-webkit-align-self: $self; 
+    	align-self: $self; 
+}
+@mixin text() {
+	font: $font-text;
+	color: $price-color; //$$$
+	line-height: 74px;
+}
+@mixin title() {
+	font: $font-title;
+	color: $text-color; //$$$
+	line-height: 56px;
+}
+@mixin subtitle() {
+	font: $font-subtitle;
+	color: $text-color; //$$$
+	line-height: 22px;
+	text-align: center;
+	
+}
+
+@function rem($pixels, $context: 16) {
+  @return #{$pixels/$context}rem;
+}
+* {
+	@include box-sizing(border-box);
+	
+}
+body {
+	 background-color: $bg-color;
+}
+ // --------- main-container -----
+ .main-container {
+ 	padding: 50px 0; 
+ 	margin: 0 auto; 
+ 	display: flex;
+ 	@include justify-content(space-evenly);
+ 	max-width: rem(1200);    
+ 	background-color: $bg-color;
+ 	font-size: 0; 
+ 	&__wrap {
+ 		padding: 15px 102px; 
+ 		height: rem(442); 
+ 		display: flex;
+ 		flex-flow: column wrap;
+ 		@include align-self(center);
+ 		background-color: #FFF;
+ 		@include border-radius(5px); 
+ 		font-size: 0; 
+ 		&:hover {
+ 			cursor: pointer;
+ 			@include box-shadow(0 0 5px darken($bg-color, 50%));
+ 			@include transition(all .3s ease);
+ 		} 
+ 		&--tall {
+ 		height: rem(500);
+ 		} 
+ 	}
+ 	&__box {
+ 		max-width: rem(156);
+ 		height: 100%;  
+ 		display: flex;
+ 		flex-flow: column wrap;
+ 		@include align-items(center);
+		@include align-self(center);
+ 		@include justify-content(space-evenly);
+ 	}
+ 	&__img {
+ 		padding-bottom: 10px;
+ 		@include align-self(flex-end);
+ 	}
+ 	&__text {
+ 		@include text();
+ 	}
+ 	&__title {
+ 	@include title();
+ 	}
+ 	&__subtitle {
+ 	@include subtitle();
+ 	}
+ }
+

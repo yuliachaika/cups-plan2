@@ -1,0 +1,125 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Miso";
+  src: url("../../fonts/miso.eot?") format("eot"), url("../../fonts/miso.woff") format("woff"), url("../../fonts/miso.ttf") format("truetype"), url("../../fonts/miso.svg#Miso") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fdde7e; }
+
+.main-container {
+  padding: 50px 0;
+  margin: 0 auto;
+  display: flex;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  max-width: 75rem;
+  background-color: #fdde7e;
+  font-size: 0; }
+  .main-container__wrap {
+    padding: 15px 102px;
+    height: 27.625rem;
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-align-self: center;
+    align-self: center;
+    background-color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 0; }
+    .main-container__wrap:hover {
+      cursor: pointer;
+      -moz-box-shadow: 0 0 5px #7a5d02;
+      -webkit-box-shadow: 0 0 5px #7a5d02;
+      box-shadow: 0 0 5px #7a5d02;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .main-container__wrap--tall {
+      height: 31.25rem; }
+  .main-container__box {
+    max-width: 9.75rem;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-align-self: center;
+    align-self: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly; }
+  .main-container__img {
+    padding-bottom: 10px;
+    -webkit-align-self: flex-end;
+    align-self: flex-end; }
+  .main-container__text {
+    font: 700 70px Miso, sans-serif;
+    color: #02995b;
+    line-height: 74px; }
+  .main-container__title {
+    font: 400 56px Miso, sans-serif;
+    color: #333333;
+    line-height: 56px; }
+  .main-container__subtitle {
+    font: 300 20px Lato, sans-serif;
+    color: #333333;
+    line-height: 22px;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
